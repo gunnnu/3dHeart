@@ -3,12 +3,13 @@
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <!-- we import arjs version without NFT but with marker + location based support -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <!-- <style>
-      a-entity#Heart{
-        position: relative;
+  <style>
+      a-entity#Heart::after{
+        position: absolute;
         inset : 0 1;
+        content:"72 BPM";
       }
-  </style> -->
+  </style>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
         <a-assets>
@@ -23,7 +24,7 @@
           scale="0.05 0.05 0.05"
           obj-model="obj: #heart-obj; mtl: #heart-mtl"
           animation="property: scale; from : 0.05 0.05 0.05; to: 0.052 0.052 0.052;easing: easeInOutCubic; loop: true; dur: 450;delay:800;dir : alternate"
-        >72 BPM</a-entity>
+        ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
